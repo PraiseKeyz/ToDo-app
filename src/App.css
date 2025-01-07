@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #003355;
+}
+
+.app-container {
+  width: 300px; /* Fixed width */
+  height: 600px; /* Fixed height */
+  margin: 0 auto; /* Center the container */
+  border: 1px solid #ddd; /* Optional border for clarity */
+  border-radius: 8px; /* Smooth corners */
+  overflow: hidden; /* Prevent content overflow */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  background-color: #021c2e;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.todo-list-wrapper {
+  flex: 1; /* Takes the remaining height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+}
+
+/* .add-icon {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 50%;
+} */
+.add-icon {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  outline: none;
+}
+.add-todo {
+  cursor: pointer;
+}
+
+/* Scrollbar Styling */
+.todo-list-wrapper::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.todo-list-wrapper::-webkit-scrollbar-track {
+  background: none; /* Background of the scrollbar track */
+  border-radius: 4px; /* Smooth corners for the track */
+}
+
+.todo-list-wrapper::-webkit-scrollbar-thumb {
+  background: #007bff; /* Color of the scrollbar thumb */
+  border-radius: 4px; /* Smooth corners for the thumb */
+}
+
+.todo-list-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #0056b3; /* Darker color on hover */
+}
+.todo-list-wrapper::-webkit-scrollbar-button {
+  display: none; /* Hides the up/down or left/right buttons on the scrollbar */
+}
+
+/* Cross-Browser Scrollbar Styles */
+.todo-list-wrapper {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #007bff #f1f1f1; /* Thumb color and track color for Firefox */
+}
+
+button:hover {
+  background-color: #d32f2f;
+}

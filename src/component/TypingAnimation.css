@@ -1,0 +1,22 @@
+.typing-animation {
+    font-size: 2.5rem;
+    display: inline-block;
+    white-space: normal; 
+    animation: blink 0.5s step-end infinite;
+    color: #021c2e;
+  }
+  
+  @keyframes blink {
+    from {
+      /* border-right-color: #333; */
+    }
+    to {
+      border-right-color: transparent;
+    }
+  }
+  @media (max-width: 768px) {
+    .typing-animation {
+        font-size: 1.5rem;
+        white-space: normal;
+    }
+  }
