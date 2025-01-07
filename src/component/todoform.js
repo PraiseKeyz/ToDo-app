@@ -11,7 +11,7 @@ const TodoForm = () => {
   
     const handleSubmit = (e) => {
       e.preventDefault();
-      axios.post("http://localhost:5000/todos", { title, content })
+      axios.post("https://crud-todo-api-blue.vercel.app/todos", { title, content })
         .then(response => {
           console.log("Todo added:", response.data);
         })

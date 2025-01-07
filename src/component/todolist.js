@@ -72,7 +72,7 @@ const TodoList = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/todos")
+      .get("https://crud-todo-api-blue.vercel.app/todos")
       .then((response) => setTodos(response.data))
       .catch((error) =>
         console.error("There was an error fetching the todos:", error)
@@ -81,7 +81,7 @@ const TodoList = () => {
 
   const handleComplete = (id, status) => {
     axios
-      .put(`http://localhost:5000/todos/${id}`, { completed: status })
+      .put(`https://crud-todo-api-blue.vercel.app/todos/${id}`, { completed: status })
       .then(() => {
         setTodos((prevTodos) =>
           prevTodos.map((todo) =>
