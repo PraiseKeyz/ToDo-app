@@ -1,0 +1,40 @@
+/* Overlay covering the entire screen */
+.edit-task-overlay {
+    position: fixed;
+    top: 10px;
+    left: 5px;
+    width: 300px;
+    height: 600px;
+    background: #021c2e;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .edit-task-modal {
+    margin: 60px;
+    position: absolute;
+  }
+  /* Close icon styling */
+  .close-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  /* Input and textarea styling */
+  /* .edit-task-overlay input,
+  .edit-task-overlay textarea {
+    width: 60%;
+    padding: 10px;
+    font-size: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+  } */
+
+  
+  
