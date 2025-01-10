@@ -1,40 +1,92 @@
-/* Overlay covering the entire screen */
 .edit-task-overlay {
-    position: fixed;
-    top: 10px;
-    left: 5px;
-    width: 300px;
-    height: 600px;
-    background: #021c2e;
-    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly dark overlay */
+    display: flex;
     align-items: center;
-    z-index: 1000;
+    justify-content: center;
+    z-index: 10; /* Ensure it overlays above other components */
   }
   
   .edit-task-modal {
-    margin: 60px;
-    position: absolute;
+    width: 100%; /* Full width of the app container */
+    height: 100%; /* Full height of the app container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Needed for absolute positioning of icons */
   }
-  /* Close icon styling */
-  .close-icon {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem;
-    cursor: pointer;
+  
+  form {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    height: auto;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    background: none; /* Matches the body background */
     color: #fff;
+    font-size: 1rem;
+    resize: none; /* Disable resizing for the textarea */
+    outline: none;
+    border-bottom: 2px solid #007bff; /* Subtle underline */
   }
   
-  /* Input and textarea styling */
-  /* .edit-task-overlay input,
-  .edit-task-overlay textarea {
-    width: 60%;
-    padding: 10px;
-    font-size: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-  } */
-
+  input::placeholder,
+  textarea::placeholder {
+    color: #aaa; /* Subtle placeholder text */
+  }
   
+  input:focus,
+  textarea:focus {
+    border-bottom: 2px solid #fff; /* Highlighted on focus */
+  }
+  
+  .edit-task-modal button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .edit-task-modal button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .edit-task-modal button.delete-btn {
+    background-color: #e74c3c; /* Red color for delete button */
+  }
+  
+  .edit-task-modal button.delete-btn:hover {
+    background-color: #c0392b; /* Darker red on hover */
+  }
+  
+  .close-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 11; /* Make sure it is above all other content */
+  }
   

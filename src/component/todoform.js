@@ -42,7 +42,7 @@ const TodoForm = ({ userId, onClose }) => {
             placeholder="Content"
             required
           />
-          <button type="submit">Add Todo</button>
+          <button type="submit" className="add-todo">Add Todo</button>
         </form>
       </div>
     </div>

@@ -10,3 +10,13 @@ li {
     margin: 5px;
     border-radius: 5px;
   }
+  .filter-buttons button {
+    background-color: #007bff;
+    color: #fff;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 5px;
+    border-radius: 5px;
+  }

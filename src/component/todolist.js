@@ -62,7 +62,7 @@ const TodoList = ({ userId }) => {
           All Tasks
         </button>
         <button
-          className={filter === "completed" ? "active" : ""}
+          className={ filter === "completed" ? "active" : ""}
           onClick={() => setFilter("completed")}
         >
           Completed Tasks
