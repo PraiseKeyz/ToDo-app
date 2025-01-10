@@ -75,7 +75,6 @@ const TodoList = ({ userId }) => {
           <li
             key={todo._id}
             className="task-item"
-            onClick={() => handleTaskClick(todo)} // Set task to edit
           >
             <input
               type="checkbox"
@@ -83,8 +82,12 @@ const TodoList = ({ userId }) => {
               onChange={(e) => {
                 handleComplete(todo._id, !todo.completed, e);
               }}
+              onClick={(e) => e.stopPropagation()}
             />
-            <span className={todo.completed ? "completed" : ""}>
+            <span className={todo.completed ? "completed" : ""}
+            onClick={() => handleTaskClick(todo)}
+              style={{ cursor: 'pointer', flex: 1 }}
+            >
               {todo.title} - {todo.content}
             </span>
           </li>
