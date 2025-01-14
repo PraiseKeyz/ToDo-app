@@ -9,15 +9,15 @@ const TodoForm = ({ userId, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTitle("");
+    setContent("");
+    onClose(); // Close the form after successful submission
 
     // Include userId in the API payload
     axios
       .post("https://crud-todo-api-d9ar.onrender.com/todos", { title, content, userId })
       .then((response) => {
         console.log("Todo added:", response.data);
-        setTitle("");
-        setContent("");
-        onClose(); // Close the form after successful submission
       })
       .catch((error) => {
         console.error("There was an error adding the todo:", error);
